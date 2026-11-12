@@ -1,0 +1,21 @@
+module TheLine.Ui
+
+singleton Anim 1.0 Anim.qml
+CenterDialog 1.0 CenterDialog.qml
+Choice 1.0 Choice.qml
+Field 1.0 Field.qml
+HoldButton 1.0 HoldButton.qml
+Icon 1.0 Icon.qml
+KeyCap 1.0 KeyCap.qml
+singleton Keypad 1.0 Keypad.qml
+KindBadge 1.0 KindBadge.qml
+LineSlider 1.0 LineSlider.qml
+ListRow 1.0 ListRow.qml
+PanelItem 1.0 PanelItem.qml
+Reading 1.0 Reading.qml
+SearchField 1.0 SearchField.qml
+Sentence 1.0 Sentence.qml
+singleton Theme 1.0 Theme.qml
+Tile 1.0 Tile.qml
+singleton Time 1.0 Time.qml
+Toggle 1.0 Toggle.qml
