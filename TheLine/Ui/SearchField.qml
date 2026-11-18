@@ -7,6 +7,9 @@ Rectangle {
     property alias text: input.text
     property alias echoMode: input.echoMode   // TextInput.Password for a password
     property string placeholder: "Search"
+    // ← and → always go up as `moved` (a grid under the field), never move the cursor in the text. Otherwise they
+    // do so only while the field is empty.
+    property bool sideArrowsMove: false
     signal moved(int dx, int dy)
     signal accepted
     signal cancelled
@@ -56,7 +59,7 @@ Rectangle {
         Keys.onEnterPressed: field.accepted()
         Keys.onEscapePressed: field.cancelled()
         Keys.onPressed: event => {
-            if ((event.key === Qt.Key_Left || event.key === Qt.Key_Right) && input.text === "") {
+            if ((event.key === Qt.Key_Left || event.key === Qt.Key_Right) && (field.sideArrowsMove || input.text === "")) {
                 field.moved(event.key === Qt.Key_Left ? -1 : 1, 0);
                 event.accepted = true;
             } else {
